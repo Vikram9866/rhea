@@ -3,12 +3,12 @@
 #
 
 from math import log, fmod, ceil
-from myhdl import Signal, intbv, modbv, always_comb, always_seq
+from myhdl import Signal, intbv, modbv, always_comb, always_seq, block
 
 from rhea.system import FIFOBus
 from .fifo_mem import fifo_mem_generic
 
-
+@block
 def fifo_sync(clock, reset, fbus):
     """ Simple synchronous FIFO
 
