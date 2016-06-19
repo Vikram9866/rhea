@@ -3,9 +3,9 @@
 #
 
 from math import ceil, log
-from myhdl import Signal, intbv, always_comb, always
+from myhdl import Signal, intbv, always_comb, always, block
 
-
+@block
 def fifo_mem_generic(wclk, wr, din, addr_w,
                      rclk, dout, addr_r,
                      mem_size=9):
